@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio website</title>
+    <link rel="Stylesheet" href="Style.css">
+   
+<body>
+<div id="header">
+         <div class="container">
+            <nav>
+                
+                    
+                <div class="logo-text">My portfolio</div>
+                
+                 <u1>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">My projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                 </ul>
+                
+            </nav>
+            <div class="header-text">
+                <p>Mechanical Designer</p>
+                <h1>Hi, I'm <span>Jothi</span> </h1>
+
+            
+         </div>
+</div>
+<!-----about----- -->
+<div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/About.jpg">
+        
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> I am a productive, well-organized, and diligent individual that is always looking for and accepting fresh concepts that can be successfully implemented.
+                        I've been designing machines, drafting, designing sheet metal, and fabricating sheet metal drawings for two years.
+                        I have two years of experience as an industry professional and am a passionate mechanical design engineer who likes to come up with new ideas and ways to improve systems.I have experience developing projects on schedule and under budget, and my area of expertise is product design and development.
+
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <u1>
+                            <li><span>Part Modeling</span><br>Concept & design development and drafting </li>
+                            <li><span>Sheet Metal</span><br>Sheet metal design,laser cutting drawing </li>
+                            <li><span>Circuit drawing</span><br>Electrical panel layout and pneumatic circuit</li>
+                            <li><span>BOM</span><br>Preparation of Bill of Material</li>
+                        </u1>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <u1>
+                            <li><span>2022 - Present</span><br>Design engineer at Vamtec machines & automation pvt ltd </li>
+                           
+                        </u1>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <u1>
+                            <li><span>2018-2022</span><br>B.E (Mechanical) at Arunai Engineering College,Thiruvannamalai </li>
+                            <li><span>2021-2022</span><br>Solidworks design course completed at CADD Centre </li>
+                            <li><span>2017-2018</span><br>HSC at Maharishi Heigher Secondary School</li>
+                            <li><span>2015-2016</span><br>SSLC at Maharishi Heigher Secondary School</li>
+                        </u1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+</div>
+<!----------services--------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>2D Design</h2>
+                <p>Most of drafting is done in 2D design. Otherwise, designs for layout and drawing preparation are laser-cut.Drafting is used for creating part drawings, subassembly drawings, and assembly drawings.The tolerance and geometric dimension symbols are mentioned in the part drawing and some assembly drawings.Following the design of the sheet metal components, a folding drawing is created and the components are assembled for laser cutting.Electrical panel layout designs, electrolyte drawings for machines and fixtures, and pneumatic circuit drawings for fixtures and machines are instances of layout designs. 
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>3D Design</h2>
+                <p>We started by creating the design concept for the machine application and operation.the concept design review with the customer; if they require any changes or additional operations, the final design will be developed. the final design incorporated part modeling, sheet metal design and structure design. The final design is reviewed with the customer once more before being approved for production. Once approved, proceed with production, assembly, and sheet metal fabrication drafting.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Stucture Design</h2>
+                <p>Build the structure design after the concept design. design of the structure based on load balancing and lifting availability. machine base frame based on the design of the structure. 
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<!------------portfolio---------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/GB 1.jpg" class="responsive" id="image">
+                <button onclick="changeImage()">next</button>
+            </div>
+            <div class="work">
+                <img src="Images/ECM 1.jpg" class="responsive" id="image1">
+                <button onclick="changeImage1()">next</button>
+            </div>
+            <div class="work">
+                <img src="Images/Fix 1.jpg">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+        function changeImage(){
+            var img = document.getElementById('image')
+            img.src = 'Images/GB 2.jpg';
+        }
+        function changeImage1(){
+            var img = document.getElementById('image1')
+            img.src = 'Images/ECM 2.jpg',
+            img.src = 'Images/ECM 3.jpg';
+        }
+</script>
+</body>
+</html>
+
